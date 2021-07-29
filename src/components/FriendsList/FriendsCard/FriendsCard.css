@@ -1,11 +1,11 @@
 .friendsCard {
   border: 5px solid red;
 }
-.friendsCard >div:not(:first-child) {
+.friendsCard > div:not(:first-child) {
   border-top: 3px solid red;
 }
 
-.friendsCard >div:not(:last-child) {
+.friendsCard > div:not(:last-child) {
   border-bottom: 3px solid red;
 }
 

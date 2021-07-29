@@ -11,8 +11,8 @@ const FriendsTable = ({
   addFriend,
   activePage,
 }) => {
-  const [deleteDialog, setDeleteDialog] = useState(false)
-  const [deleteFrd, setDeleteFrd] = useState('')
+  const [deleteDialog, setDeleteDialog] = useState(false);
+  const [deleteFrd, setDeleteFrd] = useState('');
   const comparator = (firstVal, secondVal) => {
     if (firstVal.isFav && !secondVal.isFav) {
       return -1;
@@ -41,37 +41,43 @@ const FriendsTable = ({
   };
 
   const handleDeleteDialog = (cardId) => {
-    allFriendsList.forEach((friend)=> {
-      if(friend.id===cardId){
-        setDeleteFrd(friend)
+    allFriendsList.forEach((friend) => {
+      if (friend.id === cardId) {
+        setDeleteFrd(friend);
       }
-    })
-    setDeleteDialog(true)
-  }
+    });
+    setDeleteDialog(true);
+  };
 
   return (
     <>
-    {deleteDialog && <DeleteDialog friend={deleteFrd} onDelete={onDelete} onClose={()=> setDeleteDialog(false)}/>}
-    <div className="friendsCard">
-      {allFriendsList
-        .sort(comparator)
-        .filter(({ name }, index) =>
-          filter
-            ? name.toLowerCase().includes(filter.toLowerCase())
-            : true && index >= 4 * activePage && index < 4 * (activePage + 1)
-        )
-        .map(({ name, isFav, id }) => (
-          <SoloCard
-            key={id}
-            name={name}
-            id={id}
-            isFav={isFav}
-            toggleFav={toggleFav}
-            onDelete={handleDeleteDialog}
-          />
-        ))}
-      {filter && <AddFriendBtn addFriend={addFriend} />}
-    </div>
+      {deleteDialog && (
+        <DeleteDialog
+          friend={deleteFrd}
+          onDelete={onDelete}
+          onClose={() => setDeleteDialog(false)}
+        />
+      )}
+      <div className="friendsCard">
+        {allFriendsList
+          .sort(comparator)
+          .filter(({ name }, index) =>
+            filter
+              ? name.toLowerCase().includes(filter.toLowerCase())
+              : true && index >= 4 * activePage && index < 4 * (activePage + 1)
+          )
+          .map(({ name, isFav, id }) => (
+            <SoloCard
+              key={id}
+              name={name}
+              id={id}
+              isFav={isFav}
+              toggleFav={toggleFav}
+              onDelete={handleDeleteDialog}
+            />
+          ))}
+        {filter && <AddFriendBtn addFriend={addFriend} />}
+      </div>
     </>
   );
 };

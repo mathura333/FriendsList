@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddFriendBtn.css'
+import './AddFriendBtn.css';
 
 const AddFriendBtn = ({ addFriend = () => {} }) => {
   return (

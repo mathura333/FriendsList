@@ -47,13 +47,17 @@ const FriendsList = () => {
         isFav: false,
       },
     ]);
-    setFilter('')
+    setFilter('');
   };
 
   return (
     <div className="friendsList">
       <Header />
-      <AddAndSearchBox onChange={onSearchBoxChange} addFriend={addFriend} filter={filter}/>
+      <AddAndSearchBox
+        onChange={onSearchBoxChange}
+        addFriend={addFriend}
+        filter={filter}
+      />
       <FriendsCard
         activePage={activePage}
         allFriendsList={allFriendsList}

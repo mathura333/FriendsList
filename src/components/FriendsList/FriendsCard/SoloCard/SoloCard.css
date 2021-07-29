@@ -27,13 +27,13 @@
   color: white;
 }
 
-.frd-name{
+.frd-name {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.is-frd-text{
+.is-frd-text {
   font-size: small;
 }
