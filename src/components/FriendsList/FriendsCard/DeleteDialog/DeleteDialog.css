@@ -1,0 +1,60 @@
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  background-color: #282c34;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 1000px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin-top: -100px; /* Negative half of height. */
+margin-left: -500px; /* Negative half of width. */
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  background-color: #282c34;
+  border: none;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover {
+  color:red;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete-dialog-btn{
+  border:none;
+  margin:10px;
+  color: white;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.delete-btn{
+  background-color: red;
+}
+
+.cancel-btn{
+  background-color: rgb(26, 175, 126);
+}

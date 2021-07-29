@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AddFriendBtn from './AddFriendBtn';
+import DeleteDialog from './DeleteDialog';
 import './FriendsCard.css';
 import SoloCard from './SoloCard';
 
@@ -10,6 +11,8 @@ const FriendsTable = ({
   addFriend,
   activePage,
 }) => {
+  const [deleteDialog, setDeleteDialog] = useState(false)
+  const [deleteFrd, setDeleteFrd] = useState('')
   const comparator = (firstVal, secondVal) => {
     if (firstVal.isFav && !secondVal.isFav) {
       return -1;
@@ -37,7 +40,18 @@ const FriendsTable = ({
     setAllFriendsList((prev) => prev.filter(({ id }) => id !== cardId));
   };
 
+  const handleDeleteDialog = (cardId) => {
+    allFriendsList.forEach((friend)=> {
+      if(friend.id===cardId){
+        setDeleteFrd(friend)
+      }
+    })
+    setDeleteDialog(true)
+  }
+
   return (
+    <>
+    {deleteDialog && <DeleteDialog friend={deleteFrd} onDelete={onDelete} onClose={()=> setDeleteDialog(false)}/>}
     <div className="friendsCard">
       {allFriendsList
         .sort(comparator)
@@ -53,11 +67,12 @@ const FriendsTable = ({
             id={id}
             isFav={isFav}
             toggleFav={toggleFav}
-            onDelete={onDelete}
+            onDelete={handleDeleteDialog}
           />
         ))}
       {filter && <AddFriendBtn addFriend={addFriend} />}
     </div>
+    </>
   );
 };
 

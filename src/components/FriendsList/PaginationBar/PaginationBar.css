@@ -1,9 +1,10 @@
 .pagination {
   display: inline-block;
+  margin-top: 10px;
 }
 
 .pagination button {
-  color: black;
+  color: white;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
@@ -13,8 +14,8 @@
 }
 
 .pagination button.active {
-  background-color: #4caf50;
-  color: white;
+  background-color: rgb(26, 175, 126);
+  color: #282c34;
   border-radius: 5px;
 }
 
@@ -23,7 +24,7 @@
 }
 
 .pagination button:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #42506b;
   border-radius: 5px;
 }
 

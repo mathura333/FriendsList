@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px solid rgba(243, 9, 9, 0.541);
   padding: 10px;
 }
 
@@ -24,6 +23,17 @@
   cursor: pointer;
 }
 
-.del-btn {
+.action-btn {
   color: white;
+}
+
+.frd-name{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-frd-text{
+  font-size: small;
 }

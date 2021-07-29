@@ -1,6 +1,14 @@
 .friendsCard {
   border: 5px solid red;
 }
+.friendsCard >div:not(:first-child) {
+  border-top: 3px solid red;
+}
+
+.friendsCard >div:not(:last-child) {
+  border-bottom: 3px solid red;
+}
+
 .add-friend-btn {
   width: 100%;
   background: transparent;

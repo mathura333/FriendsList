@@ -3,9 +3,9 @@ import './SoloCard.css';
 
 const FriendName = ({ name }) => {
   return (
-    <div>
+    <div className="frd-name">
       <div>{name}</div>
-      <div>is your friend</div>
+      <div className="is-frd-text">is your friend</div>
     </div>
   );
 };

@@ -10,7 +10,7 @@
   padding: 10px;
 }
 .addAndSearchBox::placeholder {
-  color: rgb(236, 199, 199);
+  color: #8c9fc5;
 }
 .addAndSearchBox:focus {
   outline: none;
