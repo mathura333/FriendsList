@@ -1,0 +1,13 @@
+.friendsCard {
+  border: 5px solid red;
+}
+.add-friend-btn {
+  width: 100%;
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

@@ -1,0 +1,17 @@
+.addAndSearchBox {
+  width: 100%;
+  min-height: 47px;
+  background: transparent;
+  border-top: 5px solid red;
+  border-left: 5px solid red;
+  border-right: 5px solid red;
+  border-bottom: none;
+  color: white;
+  padding: 10px;
+}
+.addAndSearchBox::placeholder {
+  color: rgb(236, 199, 199);
+}
+.addAndSearchBox:focus {
+  outline: none;
+}
